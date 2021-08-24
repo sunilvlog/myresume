@@ -1,0 +1,24 @@
+{% extends 'homepage/base.html' %}
+{% load static %}
+
+{% block context %}
+<div class="mt-5">
+    <div class="text-center">
+        <img src="{% static 'homepage/images/pass.jpg' %}" alt="pic" class="img-thumnail" height="170px" width="210px">
+    </div>
+    <div class="mt-5 text-white">
+        <h3 class="font-weight-bold st-font">Hello,</h3>
+    
+        <div class="px-4">
+            <p style="text-indent:100px">
+            I am <b class="text-warning">Sneha Singh</b> having 1 year of full-stack web development experience for global businesses,i offer the techical expertise you are seeking for your wep developer position.</p>
+        <p>Since earning my bechelor's degree in internet and web development from coursera webside, I have served as a web developer at <b class="text-warning">EY Technology </b>, one of biggest premier digital marketing and web development firm. In this position, I have led web development projects for clients in diverse industries includinf Technology, manufacturing, retail and finance services.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor veritatis cumque unde assumenda, quod, nostrum, voluptatibus explicabo error esse nemo ab reprehenderit vero dolorum magnam. Est iusto nesciunt similique ab.</p>
+        </div>
+    </div>
+    <div class="text-center">
+        <a href="{% url 'contact' %}" class="btn btn-outline-warning my-3 me-4">Hire Me</a>
+        <a href="{% url 'contact' %}" class="btn btn-outline-info my-3">Contact</a>
+    </div>
+</div>
+{% endblock context %}

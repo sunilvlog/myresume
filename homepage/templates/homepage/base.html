@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Resume</title>
+    <link rel="stylesheet" href="{% static 'homepage/css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'homepage/css/bootstrap.min.css' %}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+    {% block corecss %}
+     <link rel="stylesheet" href="{% static 'homepage/css/core.css' %}">    
+    {% endblock corecss %}  
+</head>
+<body>
+    <div class="container-fluid bg-dark">
+        <div class="row">
+            <div class="col-sm-2">
+                {% include 'homepage/sidebar.html' %}
+            </div>
+            <div class="col-sm-10">
+                {% block context %}
+                {% endblock context %}
+            </div>
+        </div>
+    </div>
+
+    <script src="{% static 'homepage/js/jquery.js' %}"></script>
+    <script src="{% static 'homepage/js/popper.min.js' %}"></script>
+    <script src="{% static 'homepage/js/all.min.js' %}"></script>
+    <script src="{% static 'homepage/js/bootstrap.js' %}"></script>
+    <script src="{% static 'homepage/js/myjava.js' %}"></script>
+</body>
+</html>
